@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Image Search</title>
+		
+		<!-- Adding css config code from file -->	
+		<link  rel="stylesheet" type="text/css"  href="imageInputIndependentTask.css" />
+		
+		<!-- Fonts from Google -->
+		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|PT+Sans+Caption" rel="stylesheet">
+		
+		<!-- External js file -->
+		<script type="text/javascript" src = "imageInputIndependentTask.js"></script>										    
+	</head>
+	
+	<body>				
+		<header id="searchTitle">
+			<h1 >Image search</h1>
+		</header>
+		
+		<!-- This section will be hidden once the search starts -->
+		<section id="imageFormSec">
+			<form id = "imageForm" name = "imageForm" action = "">
+				
+				Image name:
+				<input id = "inputImage" type = "text" name = "txtImage"/>
+				
+				<p>	
+					<!-- If 'I am lucky' a default 'true' value is given, otherwise, nothing -->
+					<input class = "inputButton" type="button" name="display" value="Search" onclick = "displayImage()"/>
+					<input class = "inputButton" type="button" name="display" value="I'm feeling lucky!" onclick = "displayImage(true)"/>
+				</p>				
+			</form>
+		</section>
+		
+		<!-- This section will be hidden until the image is found-->
+		<section id="imageFoundSec">
+			<p id="imageFoundP"> -- </p>
+			<img id="imageFoundImg" src = "images/fruit1.jpg" />
+		</section>		
+		
+		<!-- This section will be hidden until error message -->
+		<section id="noImageFoundSec">
+			<p id="noImageFoundP"> -- </p>
+			<input class = "inputButton" type="button" name="goBack" value="Back!" onclick="goBack()"/>
+		</section>
+	</body>
+</html>
